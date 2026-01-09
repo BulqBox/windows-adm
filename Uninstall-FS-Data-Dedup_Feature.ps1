@@ -13,7 +13,7 @@
 #>
 
 # Configuration
-$LogPath = "C:\Temp\OSF-Script-Logs"
+$LogPath = "C:\Temp\Script_Logs"
 $LogFile = Join-Path $LogPath "Dedup-Uninstall_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
 $FeatureName = "FS-Data-Deduplication"
 
@@ -117,4 +117,5 @@ catch {
     Write-Log "Ligne d'erreur: $($_.InvocationInfo.ScriptLineNumber)" "ERROR"
     Write-Log "========================================"
     exit 2
+
 }
